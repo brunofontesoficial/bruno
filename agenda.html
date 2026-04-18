@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agenda | Bruno Fontes — Virtual Coaching Sailing</title>
+  <meta name="description" content="Agende uma sessão de coaching de vela com Bruno Fontes. Disponibilidade de horários para 1:1 coaching, grupos e palestras corporativas.">
+  <link rel="canonical" href="https://brunofontes.com/agenda.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --gold: #EBDA0E; --gold-dark: #C8BA00;
+      --navy: #0D1B2A; --navy-mid: #1A2E42; --navy-light: #1E3A50;
+      --white: #FFFFFF; --gray-100: #F5F5F5; --gray-300: #CCCCCC; --gray-500: #888888;
+      --text-dark: #111111;
+      --font-display: 'Barlow Condensed', sans-serif;
+      --font-body: 'Lato', sans-serif;
+      --section-pad: 96px 0; --radius: 4px; --transition: 0.3s ease;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); background: var(--white); color: var(--text-dark); overflow-x: hidden; }
+    .container { width: 100%; max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(13,27,42,0.95); backdrop-filter: blur(8px);
+      border-bottom: 2px solid var(--gold);
+      padding: 0 24px; height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo { font-family: var(--font-display); font-size: 1.4rem; font-weight: 800; letter-spacing: 0.08em; color: var(--white); text-decoration: none; text-transform: uppercase; }
+    .nav-logo span { color: var(--gold); }
+    .nav-right { display: flex; align-items: center; gap: 4px; }
+    .nav-links { display: flex; gap: 4px; list-style: none; align-items: center; }
+    .nav-links a { color: var(--gray-300); text-decoration: none; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 8px 12px; border-radius: var(--radius); transition: color var(--transition); }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links a.active { color: var(--gold); }
+    .nav-cta { background: var(--gold) !important; color: var(--navy) !important; padding: 10px 18px !important; border-radius: var(--radius) !important; }
+    .nav-cta:hover { background: var(--gold-dark) !important; }
+
+    .lang-switcher { display: flex; gap: 2px; margin-left: 16px; border-left: 1px solid rgba(255,255,255,0.15); padding-left: 16px; }
+    .lang-btn {
+      background: transparent; border: 1px solid rgba(255,255,255,0.2); color: var(--gray-500);
+      font-family: var(--font-display); font-size: 0.75rem; font-weight: 800;
+      letter-spacing: 0.08em; padding: 5px 9px; border-radius: 3px;
+      cursor: pointer; transition: all var(--transition); min-height: 30px;
+    }
+    .lang-btn:hover { border-color: var(--gold); color: var(--gold); }
+    .lang-btn.active { background: var(--gold); color: var(--navy); border-color: var(--gold); }
+
+    /* HERO */
+    .hero { min-height: 60vh; background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy) 100%); position: relative; display: flex; align-items: center; padding: 80px 0; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 20% 50%, rgba(235,218,14,0.1) 0%, transparent 50%); }
+    .hero-content { position: relative; z-index: 2; }
+    .hero-badge { display: inline-block; background: var(--gold); color: var(--navy); font-family: var(--font-display); font-size: 0.85rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; padding: 6px 16px; border-radius: 2px; margin-bottom: 24px; }
+    .hero h1 { font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; line-height: 1.1; color: var(--white); text-transform: uppercase; letter-spacing: -0.01em; margin-bottom: 20px; }
+    .hero h1 em { font-style: italic; color: var(--gold); }
+    .hero p { font-size: 1.1rem; color: rgba(255,255,255,0.85); line-height: 1.7; max-width: 600px; margin-bottom: 40px; font-weight: 300; }
+
+    /* BUTTONS */
+    .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--gold); color: var(--navy); font-family: var(--font-display); font-size: 1rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; padding: 16px 32px; border-radius: var(--radius); text-decoration: none; transition: background var(--transition), transform 0.2s; min-height: 52px; }
+    .btn-primary:hover { background: var(--gold-dark); transform: translateY(-2px); }
+    .btn-outline { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: var(--white); font-family: var(--font-display); font-size: 1rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 15px 32px; border: 2px solid rgba(255,255,255,0.5); border-radius: var(--radius); text-decoration: none; transition: border-color var(--transition), color var(--transition); min-height: 52px; }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* SEÇÕES */
+    section { padding: var(--section-pad); }
+    .section-label { font-family: var(--font-display); font-size: 0.8rem; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 12px; display: block; }
+    .section-title { font-family: var(--font-display); font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 900; text-transform: uppercase; line-height: 0.95; color: var(--navy); margin-bottom: 24px; }
+    .section-title.light { color: var(--white); }
+    .section-label.light { color: var(--gold); }
+
+    /* CALENDÁRIO */
+    .calendario { background: var(--white); }
+    .calendario-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; margin-top: 48px; }
+    .calendario-card { background: var(--gray-100); border-radius: var(--radius); padding: 48px 32px; border-left: 4px solid var(--gold); }
+    .calendario-card h3 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--navy); margin-bottom: 20px; text-transform: uppercase; }
+    .calendario-card p { font-size: 0.95rem; line-height: 1.7; color: #666; margin-bottom: 24px; }
+    .horarios-list { list-style: none; margin: 24px 0; }
+    .horarios-list li { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 0.95rem; }
+    .horarios-list li:last-child { border-bottom: none; }
+    .horarios-list li::before { content: '✓'; color: var(--gold); font-weight: 700; font-size: 1.2rem; }
+
+    .cta-block { background: var(--navy); padding: 40px 32px; border-radius: var(--radius); margin-top: 32px; }
+    .cta-block h4 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 800; color: var(--white); margin-bottom: 16px; text-transform: uppercase; }
+    .cta-block p { color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; }
+    .cta-block .btn-primary { margin-top: 16px; }
+
+    /* DISPONIBILIDADE */
+    .disponibilidade { background: var(--navy); }
+    .disponibilidade-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+    .disponibilidade-slot { background: var(--navy-mid); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius); padding: 32px 24px; text-align: center; transition: border-color var(--transition), transform var(--transition); }
+    .disponibilidade-slot:hover { border-color: var(--gold); transform: translateY(-4px); }
+    .slot-label { font-family: var(--font-display); font-size: 0.85rem; font-weight: 800; color: var(--gray-300); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px; }
+    .slot-time { font-family: var(--font-display); font-size: 1.8rem; font-weight: 900; color: var(--gold); margin-bottom: 8px; }
+    .slot-info { font-size: 0.9rem; color: rgba(255,255,255,0.6); line-height: 1.6; }
+
+    /* FAQ */
+    .faq { background: var(--gray-100); }
+    .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 48px; }
+    .faq-item { background: var(--white); border-radius: var(--radius); padding: 28px; border: 1px solid transparent; transition: border-color var(--transition); }
+    .faq-item:hover { border-color: var(--gold); }
+    .faq-question { font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; text-transform: uppercase; color: var(--navy); margin-bottom: 12px; }
+    .faq-answer { font-size: 0.92rem; line-height: 1.65; color: #666; }
+
+    /* CONTATO */
+    .contato { background: var(--navy); text-align: center; padding: var(--section-pad); }
+    .contato-title { font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 900; text-transform: uppercase; color: var(--white); line-height: 0.95; margin-bottom: 24px; }
+    .contato-title em { color: var(--gold); font-style: italic; }
+    .contato-sub { font-size: 1.1rem; color: rgba(255,255,255,0.7); margin-bottom: 40px; max-width: 520px; margin-left: auto; margin-right: auto; line-height: 1.65; }
+    .social-row { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 32px; }
+    .social-btn { background: rgba(255,255,255,0.08); color: var(--gray-300); font-family: var(--font-display); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 10px 20px; border-radius: var(--radius); text-decoration: none; transition: background var(--transition), color var(--transition); min-height: 44px; display: flex; align-items: center; }
+    .social-btn:hover { background: var(--gold); color: var(--navy); }
+
+    /* FOOTER */
+    footer { background: #050D14; padding: 28px 24px; text-align: center; }
+    .footer-text { font-size: 0.82rem; color: rgba(255,255,255,0.3); }
+
+    .whatsapp-fixed { position: fixed; bottom: 28px; right: 28px; background: #25D366; color: var(--white); font-family: var(--font-display); font-size: 0.9rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; padding: 14px 22px; border-radius: 50px; text-decoration: none; box-shadow: 0 4px 20px rgba(37,211,102,0.5); z-index: 999; display: flex; align-items: center; gap: 8px; animation: pulse-wa 2.5s infinite; min-height: 52px; }
+    @keyframes pulse-wa { 0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.5); } 50% { box-shadow: 0 4px 32px rgba(37,211,102,0.9); } }
+
+    @media (max-width: 900px) {
+      :root { --section-pad: 64px 0; }
+      .nav-links { display: none; }
+      .hero h1 { font-size: clamp(2rem, 8vw, 3rem); }
+      .calendario-grid { grid-template-columns: 1fr; gap: 40px; }
+      .disponibilidade-grid { grid-template-columns: 1fr; }
+      .faq-grid { grid-template-columns: 1fr; }
+      .lang-switcher { display: none; }
+      .whatsapp-fixed span { display: none; }
+      .whatsapp-fixed { padding: 16px 18px; }
+    }
+    @media (max-width: 480px) {
+      .hero { min-height: auto; padding: 60px 0; }
+      .hero h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="/" class="nav-logo">Bruno <span>Fontes</span></a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="/" data-i18n="nav.home">Home</a></li>
+        <li><a href="/#packages" data-i18n="nav.coaching">Coaching</a></li>
+        <li><a href="/agenda.html" class="active" data-i18n="nav.agenda">Agenda</a></li>
+        <li><a href="https://wa.me/5548988038828" target="_blank" class="nav-cta" data-i18n="nav.contratar">Contratar</a></li>
+      </ul>
+      <div class="lang-switcher">
+        <button class="lang-btn" data-lang="pt" onclick="setLanguage('pt')">PT</button>
+        <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
+        <button class="lang-btn" data-lang="es" onclick="setLanguage('es')">ES</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" style="margin-top:64px;">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-badge" data-i18n="agenda.badge">Agende Sua Sessão Agora</span>
+        <h1 data-i18n="agenda.title">Participe do<br><em>Próximo Ciclo</em></h1>
+        <p data-i18n="agenda.p">Escolha o formato que melhor se encaixa no seu objetivo: 1:1 individual, grupo ou palestra corporativa. Temos disponibilidade a partir de hoje.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALENDÁRIO / PARTICIPAÇÃO -->
+  <section class="calendario">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label" data-i18n="agenda.sec.label">Modalidades de Coaching</span>
+        <h2 class="section-title" data-i18n="agenda.sec.title">Escolha Sua<br>Participação</h2>
+      </div>
+      <div class="calendario-grid">
+        <!-- Card 1: 1:1 -->
+        <div class="calendario-card reveal">
+          <h3 data-i18n="agenda.modal1.title">1:1 Coaching<br>Virtual</h3>
+          <p data-i18n="agenda.modal1.desc">Sessão personalizada 100% focada em você. Ideal para quem busca resultado rápido em boat handling, estratégia ou condicionamento físico.</p>
+          <ul class="horarios-list">
+            <li data-i18n="agenda.modal1.f1">Análise de vídeos pessoais</li>
+            <li data-i18n="agenda.modal1.f2">Plano de ação customizado</li>
+            <li data-i18n="agenda.modal1.f3">Suporte via WhatsApp 24/7</li>
+            <li data-i18n="agenda.modal1.f4">Sessões semanais ou quinzenais</li>
+          </ul>
+          <div class="cta-block">
+            <h4 data-i18n="agenda.modal1.cta_label">Agende sua sessão:</h4>
+            <p data-i18n="agenda.modal1.cta_sub">1ª sessão de 60min — U$150</p>
+            <a href="https://wa.me/5548988038828?text=Quero%20agendar%20uma%20sessão%201:1%20de%20coaching" target="_blank" class="btn-primary" data-i18n="agenda.cta_wa">💬 Agendar Agora</a>
+          </div>
+        </div>
+
+        <!-- Card 2: Grupo -->
+        <div class="calendario-card reveal">
+          <h3 data-i18n="agenda.modal2.title">Coaching em<br>Grupo</h3>
+          <p data-i18n="agenda.modal2.desc">Treinar junto com outros atletas que têm os mesmos objetivos. Aproveita a energia coletiva e economiza recursos.</p>
+          <ul class="horarios-list">
+            <li data-i18n="agenda.modal2.f1">Grupos de até 6 atletas</li>
+            <li data-i18n="agenda.modal2.f2">Sessões de 90 minutos</li>
+            <li data-i18n="agenda.modal2.f3">Enfoque em boat handling ou tática</li>
+            <li data-i18n="agenda.modal2.f4">Próxima turma: em breve</li>
+          </ul>
+          <div class="cta-block">
+            <h4 data-i18n="agenda.modal2.cta_label">Inscreva-se:</h4>
+            <p data-i18n="agenda.modal2.cta_sub">4 sessões — U$200 por pessoa</p>
+            <a href="https://wa.me/5548988038828?text=Me%20interessa%20coaching%20em%20grupo" target="_blank" class="btn-primary" data-i18n="agenda.cta_wa">💬 Reservar Vaga</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DISPONIBILIDADE -->
+  <section class="disponibilidade">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label light" data-i18n="agenda.avail.label">Horários Abertos</span>
+        <h2 class="section-title light" data-i18n="agenda.avail.title">Próximas<br>Disponibilidades</h2>
+      </div>
+      <div class="disponibilidade-grid">
+        <div class="disponibilidade-slot reveal">
+          <div class="slot-label" data-i18n="agenda.slot1.day">Segunda-Feira</div>
+          <div class="slot-time">14h00</div>
+          <div class="slot-info" data-i18n="agenda.slot1.info">1h coaching + análise</div>
+        </div>
+        <div class="disponibilidade-slot reveal">
+          <div class="slot-label" data-i18n="agenda.slot2.day">Quarta-Feira</div>
+          <div class="slot-time">09h00</div>
+          <div class="slot-info" data-i18n="agenda.slot2.info">1h coaching + análise</div>
+        </div>
+        <div class="disponibilidade-slot reveal">
+          <div class="slot-label" data-i18n="agenda.slot3.day">Sexta-Feira</div>
+          <div class="slot-time">16h00</div>
+          <div class="slot-info" data-i18n="agenda.slot3.info">1h coaching + análise</div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:56px;">
+        <p style="color:rgba(255,255,255,0.6);margin-bottom:24px;" data-i18n="agenda.avail.sub">Outros horários disponíveis mediante confirmação. Fale com Bruno!</p>
+        <a href="https://wa.me/5548988038828" target="_blank" class="btn-primary" data-i18n="agenda.avail.cta">💬 Ver Outras Datas</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label" data-i18n="agenda.faq.label">Dúvidas</span>
+        <h2 class="section-title" data-i18n="agenda.faq.title">Perguntas<br>Sobre Agenda</h2>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item reveal">
+          <p class="faq-question" data-i18n="agenda.faq.q1">Como é feita a agendagem?</p>
+          <p class="faq-answer" data-i18n="agenda.faq.a1">Envie uma mensagem pelo WhatsApp com a data, horário e tipo de sessão (1:1 ou grupo). Bruno confirma a disponibilidade em até 2 horas.</p>
+        </div>
+        <div class="faq-item reveal">
+          <p class="faq-question" data-i18n="agenda.faq.q2">Posso agendar com antecedência?</p>
+          <p class="faq-answer" data-i18n="agenda.faq.a2">Sim. Bruno mantém calendário aberto 30 dias adiante. Quanto antes você agendar, maior a chance de pegar o horário perfeito.</p>
+        </div>
+        <div class="faq-item reveal">
+          <p class="faq-question" data-i18n="agenda.faq.q3">E se não conseguir no horário que quero?</p>
+          <p class="faq-answer" data-i18n="agenda.faq.a3">Podemos buscar alternativas ou agendar para a próxima semana. A flexibilidade depende da demanda, mas Bruno sempre tenta acomodar.</p>
+        </div>
+        <div class="faq-item reveal">
+          <p class="faq-question" data-i18n="agenda.faq.q4">Tem opção de coaching recorrente?</p>
+          <p class="faq-answer" data-i18n="agenda.faq.a4">Sim! Você pode contratar pacotes mensais (4 sessões) com horários fixos toda semana. Desconto de 15% vs agendamento avulso.</p>
+        </div>
+        <div class="faq-item reveal">
+          <p class="faq-question" data-i18n="agenda.faq.q5">Qual é a política de cancelamento?</p>
+          <p class="faq-answer" data-i18n="agenda.faq.a5">Cancelamento com 24h de antecedência = sem custos. Menos de 24h = cobra a sessão. Reagendar sem custo se avisar com tempo.</p>
+        </div>
+        <div class="faq-item reveal">
+          <p class="faq-question" data-i18n="agenda.faq.q6">Preciso ter equipamento de vela para participar?</p>
+          <p class="faq-answer" data-i18n="agenda.faq.a6">Não. O coaching virtual funciona com análise de vídeos e instrução técnica. Se você navega, melhor — mas não é obrigatório começar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="contato">
+    <div class="container">
+      <h2 class="contato-title reveal" data-i18n="agenda.final.title">Agende <em>hoje</em></h2>
+      <p class="contato-sub reveal" data-i18n="agenda.final.sub">Mensagem direto para Bruno. Ele responde pessoalmente em até 2 horas.</p>
+      <a href="https://wa.me/5548988038828" target="_blank" class="btn-primary reveal" style="font-size:1.2rem;padding:20px 48px;margin:0 auto;display:inline-flex;" data-i18n="agenda.final.cta">💬 Agendar Coaching Agora</a>
+      <div class="social-row reveal">
+        <a href="https://www.instagram.com/brunofontesoficial" target="_blank" class="social-btn">Instagram</a>
+        <a href="https://www.youtube.com/fontesbruno" target="_blank" class="social-btn">YouTube</a>
+        <a href="https://www.facebook.com/fontesbruno" target="_blank" class="social-btn">Facebook</a>
+        <a href="https://www.linkedin.com/brunofontesoficial" target="_blank" class="social-btn">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="footer-text" data-i18n="footer.text">© 2025 Bruno Fontes — Virtual Coaching Sailing · Florianópolis, SC · +55 48 98803-8828</p>
+  </footer>
+
+  <!-- WHATSAPP FIXO -->
+  <a href="https://wa.me/5548988038828" target="_blank" class="whatsapp-fixed" id="wa-fixed" aria-label="WhatsApp">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span data-i18n="wa.label">Agendar agora</span>
+  </a>
+
+  <!-- I18N ENGINE -->
+  <script>
+  const translations = {
+    pt: {
+      nav: { home:"Home", coaching:"Coaching", agenda:"Agenda", contratar:"Contratar" },
+      agenda: {
+        badge: "Agende Sua Sessão Agora",
+        title: "Participe do<br><em>Próximo Ciclo</em>",
+        p: "Escolha o formato que melhor se encaixa no seu objetivo: 1:1 individual, grupo ou palestra corporativa. Temos disponibilidade a partir de hoje.",
+        sec: { label:"Modalidades de Coaching", title:"Escolha Sua<br>Participação" },
+        modal1: {
+          title:"1:1 Coaching<br>Virtual",
+          desc:"Sessão personalizada 100% focada em você. Ideal para quem busca resultado rápido em boat handling, estratégia ou condicionamento físico.",
+          f1:"Análise de vídeos pessoais",
+          f2:"Plano de ação customizado",
+          f3:"Suporte via WhatsApp 24/7",
+          f4:"Sessões semanais ou quinzenais",
+          cta_label:"Agende sua sessão:",
+          cta_sub:"1ª sessão de 60min — U$150"
+        },
+        modal2: {
+          title:"Coaching em<br>Grupo",
+          desc:"Treinar junto com outros atletas que têm os mesmos objetivos. Aproveita a energia coletiva e economiza recursos.",
+          f1:"Grupos de até 6 atletas",
+          f2:"Sessões de 90 minutos",
+          f3:"Enfoque em boat handling ou tática",
+          f4:"Próxima turma: em breve",
+          cta_label:"Inscreva-se:",
+          cta_sub:"4 sessões — U$200 por pessoa"
+        },
+        cta_wa:"💬 Agendar Agora",
+        avail: {
+          label:"Horários Abertos",
+          title:"Próximas<br>Disponibilidades",
+          sub:"Outros horários disponíveis mediante confirmação. Fale com Bruno!",
+          cta:"💬 Ver Outras Datas"
+        },
+        slot1: { day:"Segunda-Feira", info:"1h coaching + análise" },
+        slot2: { day:"Quarta-Feira", info:"1h coaching + análise" },
+        slot3: { day:"Sexta-Feira", info:"1h coaching + análise" },
+        faq: {
+          label:"Dúvidas",
+          title:"Perguntas<br>Sobre Agenda",
+          q1:"Como é feita a agendagem?",
+          a1:"Envie uma mensagem pelo WhatsApp com a data, horário e tipo de sessão (1:1 ou grupo). Bruno confirma a disponibilidade em até 2 horas.",
+          q2:"Posso agendar com antecedência?",
+          a2:"Sim. Bruno mantém calendário aberto 30 dias adiante. Quanto antes você agendar, maior a chance de pegar o horário perfeito.",
+          q3:"E se não conseguir no horário que quero?",
+          a3:"Podemos buscar alternativas ou agendar para a próxima semana. A flexibilidade depende da demanda, mas Bruno sempre tenta acomodar.",
+          q4:"Tem opção de coaching recorrente?",
+          a4:"Sim! Você pode contratar pacotes mensais (4 sessões) com horários fixos toda semana. Desconto de 15% vs agendamento avulso.",
+          q5:"Qual é a política de cancelamento?",
+          a5:"Cancelamento com 24h de antecedência = sem custos. Menos de 24h = cobra a sessão. Reagendar sem custo se avisar com tempo.",
+          q6:"Preciso ter equipamento de vela para participar?",
+          a6:"Não. O coaching virtual funciona com análise de vídeos e instrução técnica. Se você navega, melhor — mas não é obrigatório começar."
+        },
+        final: {
+          title:"Agende <em>hoje</em>",
+          sub:"Mensagem direto para Bruno. Ele responde pessoalmente em até 2 horas.",
+          cta:"💬 Agendar Coaching Agora"
+        }
+      },
+      footer: { text:"© 2025 Bruno Fontes — Virtual Coaching Sailing · Florianópolis, SC · +55 48 98803-8828" },
+      wa: { label:"Agendar agora" }
+    },
+
+    en: {
+      nav: { home:"Home", coaching:"Coaching", agenda:"Schedule", contratar:"Hire" },
+      agenda: {
+        badge: "Book Your Session Now",
+        title: "Join the<br><em>Next Cycle</em>",
+        p: "Choose the format that fits your goals: 1:1 personal, group sessions, or corporate keynotes. Availability starting today.",
+        sec: { label:"Coaching Modalities", title:"Choose Your<br>Participation" },
+        modal1: {
+          title:"1:1 Virtual<br>Coaching",
+          desc:"Personalized session 100% focused on you. Perfect for quick wins in boat handling, strategy or fitness conditioning.",
+          f1:"Analysis of your sailing videos",
+          f2:"Customized action plan",
+          f3:"WhatsApp support 24/7",
+          f4:"Weekly or bi-weekly sessions",
+          cta_label:"Book your session:",
+          cta_sub:"First 60min session — U$150"
+        },
+        modal2: {
+          title:"Group<br>Coaching",
+          desc:"Train with other athletes who share your goals. Harness collective energy and save resources.",
+          f1:"Groups up to 6 athletes",
+          f2:"90-minute sessions",
+          f3:"Focus on boat handling or tactics",
+          f4:"Next group: coming soon",
+          cta_label:"Sign up:",
+          cta_sub:"4 sessions — U$200 per person"
+        },
+        cta_wa:"💬 Book Now",
+        avail: {
+          label:"Open Slots",
+          title:"Next<br>Availability",
+          sub:"Other times available upon confirmation. Talk to Bruno!",
+          cta:"💬 See Other Dates"
+        },
+        slot1: { day:"Monday", info:"1h coaching + analysis" },
+        slot2: { day:"Wednesday", info:"1h coaching + analysis" },
+        slot3: { day:"Friday", info:"1h coaching + analysis" },
+        faq: {
+          label:"Questions",
+          title:"FAQs About<br>Scheduling",
+          q1:"How do I book a session?",
+          a1:"Send a WhatsApp message with your preferred date, time and session type (1:1 or group). Bruno confirms availability within 2 hours.",
+          q2:"Can I book in advance?",
+          a2:"Yes. Bruno keeps his calendar open 30 days ahead. The sooner you book, the better your chances of getting the perfect slot.",
+          q3:"What if my preferred time isn't available?",
+          a3:"We can look for alternatives or schedule for next week. Flexibility depends on demand, but Bruno always tries to accommodate.",
+          q4:"Do you offer recurring coaching packages?",
+          a4:"Yes! You can book monthly packages (4 sessions) with fixed weekly times. 15% discount vs single sessions.",
+          q5:"What's your cancellation policy?",
+          a5:"Cancel with 24h notice = no charge. Less than 24h = session is charged. Reschedule free if you give advance notice.",
+          q6:"Do I need sailing equipment to participate?",
+          a6:"No. Virtual coaching works through video analysis and technical instruction. If you sail, great — but it's not required to start."
+        },
+        final: {
+          title:"Book <em>today</em>",
+          sub:"Message Bruno directly. He responds personally within 2 hours.",
+          cta:"💬 Book Coaching Now"
+        }
+      },
+      footer: { text:"© 2025 Bruno Fontes — Virtual Coaching Sailing · Florianópolis, SC · +55 48 98803-8828" },
+      wa: { label:"Book now" }
+    },
+
+    es: {
+      nav: { home:"Home", coaching:"Coaching", agenda:"Agenda", contratar:"Contratar" },
+      agenda: {
+        badge: "Reserva Tu Sesión Ahora",
+        title: "Únete al<br><em>Próximo Ciclo</em>",
+        p: "Elige el formato que se ajuste a tus objetivos: 1:1 personal, sesiones grupales o conferencias corporativas. Disponibilidad a partir de hoy.",
+        sec: { label:"Modalidades de Coaching", title:"Elige Tu<br>Participación" },
+        modal1: {
+          title:"Coaching 1:1<br>Virtual",
+          desc:"Sesión personalizada 100% enfocada en ti. Perfecto para resultados rápidos en boat handling, estrategia o acondicionamiento físico.",
+          f1:"Análisis de tus vídeos de navegación",
+          f2:"Plan de acción personalizado",
+          f3:"Soporte WhatsApp 24/7",
+          f4:"Sesiones semanales o quincenales",
+          cta_label:"Reserva tu sesión:",
+          cta_sub:"Primera sesión 60min — U$150"
+        },
+        modal2: {
+          title:"Coaching<br>Grupal",
+          desc:"Entrena con otros atletas que comparten tus objetivos. Aprovecha la energía colectiva y ahorra recursos.",
+          f1:"Grupos de hasta 6 atletas",
+          f2:"Sesiones de 90 minutos",
+          f3:"Enfoque en boat handling o táctica",
+          f4:"Próximo grupo: próximamente",
+          cta_label:"Inscríbete:",
+          cta_sub:"4 sesiones — U$200 por persona"
+        },
+        cta_wa:"💬 Reservar Ahora",
+        avail: {
+          label:"Horarios Disponibles",
+          title:"Próxima<br>Disponibilidad",
+          sub:"Otros horarios disponibles bajo confirmación. ¡Habla con Bruno!",
+          cta:"💬 Ver Otras Fechas"
+        },
+        slot1: { day:"Lunes", info:"1h coaching + análisis" },
+        slot2: { day:"Miércoles", info:"1h coaching + análisis" },
+        slot3: { day:"Viernes", info:"1h coaching + análisis" },
+        faq: {
+          label:"Preguntas",
+          title:"Preguntas Frecuentes<br>Sobre Agenda",
+          q1:"¿Cómo reservo una sesión?",
+          a1:"Envía un mensaje por WhatsApp con tu fecha, hora y tipo de sesión (1:1 o grupo). Bruno confirma disponibilidad en hasta 2 horas.",
+          q2:"¿Puedo reservar con anticipación?",
+          a2:"Sí. Bruno mantiene su calendario abierto 30 días adelante. Cuanto antes reserves, mejores oportunidades de conseguir tu horario ideal.",
+          q3:"¿Qué pasa si mi horario preferido no está disponible?",
+          a3:"Podemos buscar alternativas u agendar para la próxima semana. La flexibilidad depende de la demanda, pero Bruno siempre intenta acomodar.",
+          q4:"¿Hay opciones de coaching recurrente?",
+          a4:"Sí. Puedes contratar paquetes mensuales (4 sesiones) con horarios fijos cada semana. Descuento del 15% vs sesiones individuales.",
+          q5:"¿Cuál es la política de cancelación?",
+          a5:"Cancelación con 24h de anticipación = sin costo. Menos de 24h = se cobra la sesión. Reagenda gratis si avisas con tiempo.",
+          q6:"¿Necesito equipamiento de vela para participar?",
+          a6:"No. El coaching virtual funciona mediante análisis de vídeos e instrucción técnica. Si navegas, mejor — pero no es obligatorio comenzar."
+        },
+        final: {
+          title:"Reserva <em>hoy</em>",
+          sub:"Mensaje directo a Bruno. Él responde personalmente en hasta 2 horas.",
+          cta:"💬 Reservar Coaching Ahora"
+        }
+      },
+      footer: { text:"© 2025 Bruno Fontes — Virtual Coaching Sailing · Florianópolis, SC · +55 48 98803-8828" },
+      wa: { label:"Reservar ahora" }
+    }
+  };
+
+  function get(obj, path) {
+    return path.split('.').reduce((acc, k) => (acc && acc[k] !== undefined ? acc[k] : null), obj);
+  }
+
+  function applyLanguage(lang) {
+    const t = translations[lang];
+    if (!t) return;
+
+    document.title = lang === 'pt' ? "Agenda | Bruno Fontes — Virtual Coaching Sailing" : lang === 'en' ? "Schedule | Bruno Fontes — Virtual Coaching Sailing" : "Agenda | Bruno Fontes — Virtual Coaching Sailing";
+    document.documentElement.lang = lang === 'pt' ? 'pt-BR' : lang === 'es' ? 'es' : 'en';
+
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const val = get(t, el.getAttribute('data-i18n'));
+      if (val !== null) el.innerHTML = val;
+    });
+
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+
+    const waMessages = {
+      pt: "Olá!%20Vim%20pelo%20site%20e%20tenho%20interesse%20em%20agendar%20uma%20sessão%20de%20coaching.",
+      en: "Hi!%20I%20found%20your%20website%20and%20I'm%20interested%20in%20booking%20a%20coaching%20session.",
+      es: "¡Hola!%20Vi%20tu%20sitio%20web%20y%20me%20interesa%20reservar%20una%20sesión%20de%20coaching."
+    };
+    const waBase = "https://wa.me/5548988038828?text=";
+    document.querySelectorAll('a[href*="wa.me"]').forEach(a => {
+      if (a.href.includes('?text=')) return;
+      a.href = waBase + waMessages[lang];
+    });
+
+    localStorage.setItem('bf_lang', lang);
+  }
+
+  function detectLanguage() {
+    const saved = localStorage.getItem('bf_lang');
+    if (saved && translations[saved]) return saved;
+    const browser = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+    if (browser.startsWith('pt')) return 'pt';
+    if (browser.startsWith('es')) return 'es';
+    return 'en';
+  }
+
+  function setLanguage(lang) {
+    applyLanguage(lang);
+  }
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(el => {
+      if (el.isIntersecting) { el.target.classList.add('visible'); observer.unobserve(el.target); }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  applyLanguage(detectLanguage());
+  </script>
+
+</body>
+</html>
