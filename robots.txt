@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Bloquear thank-you page (conversão)
+Disallow: /obrigado.html
+
+# Bloquear sobras de cPanel caso reapareçam
+Disallow: /cgi-sys/
+Disallow: /cgi-bin/
+
+Sitemap: https://www.brunofontes.com/sitemap.xml

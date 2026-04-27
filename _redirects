@@ -1,0 +1,19 @@
+# Redireciona URLs .html → URLs limpas (canonical)
+/index.html             /                       301
+/atleta.html            /atleta                 301
+/clinicas.html          /clinicas               301
+/palestras.html         /palestras              301
+/about.html             /about                  301
+/contato.html           /contato                301
+/eventos.html           /eventos                301
+/coaching-ilca.html     /coaching-ilca          301
+/parceiros.html         /parceiros              301
+/team-fontes.html       /team-fontes            301
+/sailing-experience.html /sailing-experience    301
+/privacidade.html       /privacidade            301
+
+# Redireciona páginas órfãs (conteúdo 404) para destinos corretos
+/coach.html             /team-fontes            301
+/palestra.html          /palestras              301
+/coach                  /team-fontes            301
+/palestra               /palestras              301
