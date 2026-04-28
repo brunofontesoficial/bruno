@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guia: Os 4 Pilares da Performance no Veleiro | Bruno Fontes</title>
+<meta name="description" content="Os 4 pilares que separam o velejador mediano do campeão. Mindset, Tática & Estratégia, Físico e Habilidades. Guia gratuito de Bruno Fontes, Campeão Mundial Master 2025.">
+<link rel="canonical" href="https://brunofontes.com/guia-4-pilares">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --gold:#EBDA0E;--gold-dark:#C8BA00;
+  --navy:#0D1B2A;--navy-mid:#1A2E42;--navy-deep:#07091a;
+  --white:#fff;--gray-100:#F8F8F6;--gray-200:#EBEBEB;
+  --font-display:'Barlow Condensed',Impact,sans-serif;
+  --font-body:'Lato',system-ui,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--white);color:var(--navy);overflow-x:hidden;line-height:1.6}
+img{max-width:100%;display:block}
+a{color:inherit}
+
+/* ── COVER ── */
+.cover{
+  background:var(--navy-deep);
+  min-height:100vh;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:60px 24px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.cover::before{
+  content:'';
+  position:absolute;inset:0;
+  background:radial-gradient(ellipse 80% 60% at 50% 40%, rgba(235,218,14,.07) 0%, transparent 70%);
+}
+.cover-inner{position:relative;z-index:1;max-width:720px;}
+.cover-badge{
+  display:inline-block;
+  background:var(--gold);color:var(--navy);
+  font-family:var(--font-display);font-size:.78rem;font-weight:800;
+  letter-spacing:.16em;text-transform:uppercase;
+  padding:5px 16px;border-radius:2px;margin-bottom:32px;
+}
+.cover h1{
+  font-family:var(--font-display);
+  font-size:clamp(3rem,8vw,5.5rem);
+  font-weight:900;line-height:.9;
+  text-transform:uppercase;color:#fff;
+  margin-bottom:8px;
+}
+.cover h1 em{color:var(--gold);font-style:italic;}
+.cover-subtitle{
+  font-family:var(--font-display);
+  font-size:clamp(1.2rem,3vw,1.8rem);
+  font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:rgba(255,255,255,.6);margin-bottom:40px;
+}
+.cover-line{width:60px;height:3px;background:var(--gold);margin:0 auto 40px;}
+.cover-author{
+  display:flex;align-items:center;justify-content:center;gap:16px;
+}
+.author-info{text-align:left;}
+.author-name{
+  font-family:var(--font-display);font-size:1.2rem;font-weight:800;
+  letter-spacing:.06em;text-transform:uppercase;color:#fff;
+}
+.author-title{
+  font-size:.82rem;color:rgba(255,255,255,.55);font-weight:300;
+  letter-spacing:.04em;line-height:1.5;
+}
+.cover-scroll{
+  position:absolute;bottom:32px;left:50%;transform:translateX(-50%);
+  font-family:var(--font-display);font-size:.75rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35);
+}
+
+/* ── INTRO ── */
+.intro{
+  background:var(--gold);padding:64px 24px;text-align:center;
+}
+.intro-inner{max-width:680px;margin:0 auto;}
+.intro h2{
+  font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.6rem);
+  font-weight:900;text-transform:uppercase;color:var(--navy);
+  line-height:.96;margin-bottom:20px;
+}
+.intro p{
+  font-size:1.1rem;color:rgba(13,27,42,.8);line-height:1.7;
+}
+.intro p strong{color:var(--navy);}
+
+/* ── PILLAR SECTIONS ── */
+.pillar{padding:80px 24px;}
+.pillar:nth-child(odd){background:var(--gray-100);}
+.pillar:nth-child(even){background:var(--white);}
+.pillar-inner{max-width:760px;margin:0 auto;}
+.pillar-header{display:flex;align-items:flex-start;gap:24px;margin-bottom:40px;}
+.pillar-number{
+  flex:0 0 auto;
+  width:72px;height:72px;
+  background:var(--navy);color:var(--gold);
+  font-family:var(--font-display);font-size:2.2rem;font-weight:900;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:4px;
+}
+.pillar-title-block{}
+.pillar-tag{
+  font-family:var(--font-display);font-size:.75rem;font-weight:800;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--gold-dark);
+  display:block;margin-bottom:4px;
+}
+.pillar h2{
+  font-family:var(--font-display);font-size:clamp(2rem,5vw,3rem);
+  font-weight:900;text-transform:uppercase;color:var(--navy);
+  line-height:.9;
+}
+.pillar-lead{
+  font-size:1.15rem;font-weight:700;color:var(--navy);
+  border-left:4px solid var(--gold);padding-left:20px;
+  margin-bottom:32px;line-height:1.5;
+}
+.pillar p{font-size:1rem;color:#333;line-height:1.75;margin-bottom:20px;}
+.pillar p:last-child{margin-bottom:0;}
+
+.tip-box{
+  background:var(--navy);border-radius:6px;padding:28px 32px;
+  margin:32px 0;
+}
+.tip-box-label{
+  font-family:var(--font-display);font-size:.75rem;font-weight:800;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--gold);
+  display:block;margin-bottom:12px;
+}
+.tip-box p{color:rgba(255,255,255,.85);margin-bottom:0;font-size:.95rem;}
+.tip-box strong{color:var(--gold);}
+
+.checklist{list-style:none;margin:24px 0;}
+.checklist li{
+  display:flex;align-items:flex-start;gap:12px;
+  font-size:.98rem;color:#333;line-height:1.6;
+  padding:10px 0;
+  border-bottom:1px solid var(--gray-200);
+}
+.checklist li:last-child{border-bottom:none;}
+.checklist li::before{
+  content:'✓';
+  flex:0 0 auto;
+  width:24px;height:24px;
+  background:var(--gold);color:var(--navy);
+  font-family:var(--font-display);font-size:.9rem;font-weight:900;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:2px;margin-top:1px;
+}
+
+/* ── DIVIDER ── */
+.pillar-divider{
+  height:4px;
+  background:linear-gradient(90deg,var(--gold) 0%, var(--navy) 100%);
+}
+
+/* ── CLOSING ── */
+.closing{
+  background:var(--navy-deep);padding:80px 24px;text-align:center;
+}
+.closing-inner{max-width:640px;margin:0 auto;}
+.closing h2{
+  font-family:var(--font-display);
+  font-size:clamp(2rem,5vw,3.2rem);
+  font-weight:900;text-transform:uppercase;color:#fff;
+  line-height:.92;margin-bottom:20px;
+}
+.closing h2 em{color:var(--gold);font-style:italic;}
+.closing p{color:rgba(255,255,255,.7);font-size:1rem;line-height:1.7;margin-bottom:32px;}
+.btn-cta{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--gold);color:var(--navy);
+  font-family:var(--font-display);font-size:1.1rem;font-weight:800;
+  letter-spacing:.06em;text-transform:uppercase;
+  padding:18px 40px;border-radius:4px;text-decoration:none;
+  transition:background .2s,transform .2s;
+}
+.btn-cta:hover{background:var(--gold-dark);transform:translateY(-2px);}
+.closing-note{
+  margin-top:24px;font-size:.82rem;color:rgba(255,255,255,.35);
+}
+
+/* ── FOOTER ── */
+.guide-footer{
+  background:var(--navy);padding:24px;text-align:center;
+  font-size:.78rem;color:rgba(255,255,255,.4);font-family:var(--font-body);
+}
+.guide-footer a{color:rgba(255,255,255,.5);text-decoration:underline;}
+
+/* ── PRINT ── */
+@media print{
+  .cover{min-height:auto;padding:80px 40px;}
+  .cover-scroll{display:none;}
+  .pillar,.intro,.closing{padding:48px 40px;}
+  .btn-cta{display:none;}
+}
+@media (max-width:600px){
+  .pillar-header{flex-direction:column;gap:16px;}
+  .pillar-number{width:56px;height:56px;font-size:1.8rem;}
+}
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<section class="cover">
+  <div class="cover-inner">
+    <span class="cover-badge">Guia Gratuito · Bruno Fontes</span>
+    <h1>Os 4 Pilares<br>da <em>Performance</em><br>no Veleiro</h1>
+    <p class="cover-subtitle">O que separa o velejador mediano do campeão</p>
+    <div class="cover-line"></div>
+    <div class="cover-author">
+      <div class="author-info">
+        <span class="author-name">Bruno Fontes</span>
+        <span class="author-title">3× Olímpico · Campeão Mundial Master ILCA 7 · 2025<br>Coach Olímpico de China &amp; Trinidad e Tobago</span>
+      </div>
+    </div>
+  </div>
+  <p class="cover-scroll">Role para começar ↓</p>
+</section>
+
+<!-- INTRO -->
+<section class="intro">
+  <div class="intro-inner">
+    <h2>Por que a maioria trava no mesmo ponto?</h2>
+    <p>Depois de 40 anos navegando e treinando atletas em mais de 20 países, aprendi que <strong>os erros que limitam o velejador raramente são técnicos</strong>. Quase sempre estão num destes quatro pilares — e geralmente em mais de um ao mesmo tempo.</p>
+    <p style="margin-top:16px;">Este guia vai direto ao ponto. Para cada pilar, você vai entender <strong>o que é, por que importa</strong> e <strong>o que fazer agora</strong> para evoluir.</p>
+  </div>
+</section>
+
+<!-- PILLAR 1 — MINDSET -->
+<div class="pillar-divider"></div>
+<section class="pillar" id="mindset">
+  <div class="pillar-inner">
+    <div class="pillar-header">
+      <div class="pillar-number">01</div>
+      <div class="pillar-title-block">
+        <span class="pillar-tag">Pilar 1</span>
+        <h2>Mindset</h2>
+      </div>
+    </div>
+
+    <p class="pillar-lead">"O veleiro mais rápido da largada raramente é o mais rápido na chegada. O que decide é o que acontece dentro da cabeça do velejador."</p>
+
+    <p>Nos Jogos Olímpicos de Paris 2024, disputei a regata final com 44 anos e três décadas de ciclos olímpicos na bagagem. O que me levou àquela largada não foi só o preparo físico — foi a capacidade de controlar a mente sob pressão extrema, recuperar de erros em segundos e manter o foco numa prova que durava horas.</p>
+
+    <p>Mindset não é otimismo. É o conjunto de hábitos mentais que você treina off-season para que funcionem automaticamente quando a pressão aumentar.</p>
+
+    <div class="tip-box">
+      <span class="tip-box-label">Erro mais comum</span>
+      <p>O velejador treina físico e técnica por horas, mas <strong>não dedica nenhum tempo estruturado ao treino mental</strong>. O resultado: excelente preparação, performance abaixo do nível em competição.</p>
+    </div>
+
+    <p><strong>Os três hábitos que mais impactam a performance mental:</strong></p>
+
+    <ul class="checklist">
+      <li><strong>Rotina pré-regata:</strong> Um protocolo fixo de 15–30 min antes de cada largada — respiração, visualização da pista, definição de intenção. Não improvise. Ritualize.</li>
+      <li><strong>Reset de 3 segundos:</strong> Após cada erro (capotagem, falsa largada, marca errada), treine o gesto de "fechar e abrir" — aceitar o erro, definir a próxima ação, seguir em frente. Erros multiplicam quando você leva raiva para a próxima boia.</li>
+      <li><strong>Diário de regatas:</strong> Escreva após cada prova: o que controlei bem, o que perdi para pressão interna, uma intenção para a próxima regata. Em três meses, seus padrões mentais negativos ficam evidentes — e superáveis.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- PILLAR 2 — TÁTICA E ESTRATÉGIA -->
+<div class="pillar-divider"></div>
+<section class="pillar" id="tatica">
+  <div class="pillar-inner">
+    <div class="pillar-header">
+      <div class="pillar-number">02</div>
+      <div class="pillar-title-block">
+        <span class="pillar-tag">Pilar 2</span>
+        <h2>Tática &amp;<br>Estratégia</h2>
+      </div>
+    </div>
+
+    <p class="pillar-lead">"Velocidade sem estratégia é energia desperdiçada. Estratégia sem velocidade é teoria. Os campeões integram os dois em tempo real."</p>
+
+    <p>A maioria confunde tática com estratégia — e paga caro por isso nas regatas. <strong>Estratégia</strong> é o plano para a pista: qual lado da água paga mais, onde está o vento mais forte, qual é a layline real. <strong>Tática</strong> é o que você faz com a frota ao redor: cobrir, soltar, cruzar, afundar o rival.</p>
+
+    <p>O erro clássico é focar na tática (adversários) antes de dominar a estratégia (pista). Você não pode cobrir alguém e ao mesmo tempo calcular um shift de 15 graus que está chegando. Os dois têm que ser automáticos para funcionar juntos.</p>
+
+    <div class="tip-box">
+      <span class="tip-box-label">Erro mais comum</span>
+      <p>Navegar seguindo a frota em vez de ler a pista. <strong>A frota frequentemente está errada</strong> — especialmente nos primeiros metros após a largada. Aprenda a confiar nos seus dados de vento.</p>
+    </div>
+
+    <p><strong>O que treinar para evoluir:</strong></p>
+
+    <ul class="checklist">
+      <li><strong>Leitura de vento antes da largada:</strong> Chegue à pista 30 minutos antes. Faça bordadas longas, anote shifts, identifique o lado favorecido. Não improvise — tome uma decisão baseada em dados observados.</li>
+      <li><strong>Laylines precisas:</strong> A maioria perde 3–5 posições por regata calculando mal as laylines. Pratique em treino com marcas físicas até que o cálculo de ângulo seja automático.</li>
+      <li><strong>Protocolo de largada:</strong> Defina o ponta favorecida, sua posição ideal, o tempo de aproximação. Execute o mesmo protocolo em cada regata. Consistência supera inspiração.</li>
+      <li><strong>Leitura de frota:</strong> Identifique os 3 principais rivais antes de cada regata. Saiba onde estão, não onde você está. A gestão de frota começa na sua cabeça antes de entrar na água.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- PILLAR 3 — FÍSICO -->
+<div class="pillar-divider"></div>
+<section class="pillar" id="fisico">
+  <div class="pillar-inner">
+    <div class="pillar-header">
+      <div class="pillar-number">03</div>
+      <div class="pillar-title-block">
+        <span class="pillar-tag">Pilar 3</span>
+        <h2>Físico</h2>
+      </div>
+    </div>
+
+    <p class="pillar-lead">"Quando você está no limite físico, as decisões pioram, a técnica quebra e o mindset desmorona. Tudo começa no corpo."</p>
+
+    <p>O condicionamento físico no veleiro ILCA não é estética — é função. A capacidade de fazer hiking intenso durante 6 horas seguidas, em ondas, com vento de 20 nós, mantendo concentração e precisão técnica: isso separa campeões de competidores. E essa capacidade se treina fora d'água tanto quanto dentro.</p>
+
+    <p>Em parceria com a Bridge Athletic, desenvolvi programas de força e condicionamento específicos para velejadores. O que aprendi em 40 anos: a maioria treina o físico errado para a vela — foca em força absoluta quando deveria focar em resistência de força (hiking) e estabilidade de core.</p>
+
+    <div class="tip-box">
+      <span class="tip-box-label">Erro mais comum</span>
+      <p>Treinar apenas na água e esperar que o físico melhore sozinho. <strong>O hiking isométrico de 20 minutos seguidos exige preparo específico</strong> que nenhuma regata vai dar — só treino em seco constrói essa base.</p>
+    </div>
+
+    <p><strong>Os pilares do físico para velejadores ILCA:</strong></p>
+
+    <ul class="checklist">
+      <li><strong>Resistência de hiking:</strong> Isométrico de quadríceps (ângulo de 90–110°), progressão de 3 séries de 2 minutos até séries de 10+ minutos. É chato, dói e é o exercício mais específico que existe para o ILCA.</li>
+      <li><strong>Core estabilizador:</strong> Prancha frontal e lateral com variações dinâmicas. O core conecta a força das pernas com o controle do barco — sem ele, você perde velocidade mesmo com quadríceps fortes.</li>
+      <li><strong>Capacidade aeróbica:</strong> A regata média dura 60–90 minutos de esforço contínuo. Zone 2 (65–75% FCmáx) 3× por semana. Correr, remar, ciclismo — qualquer modalidade. O motor aeróbico é a base de tudo.</li>
+      <li><strong>Mobilidade de quadril e coluna:</strong> Ignorada por 90% dos velejadores e responsável por 90% das lesões. 10 minutos diários de mobilização = anos a mais de carreira.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- PILLAR 4 — HABILIDADES -->
+<div class="pillar-divider"></div>
+<section class="pillar" id="habilidades">
+  <div class="pillar-inner">
+    <div class="pillar-header">
+      <div class="pillar-number">04</div>
+      <div class="pillar-title-block">
+        <span class="pillar-tag">Pilar 4</span>
+        <h2>Habilidades</h2>
+      </div>
+    </div>
+
+    <p class="pillar-lead">"Boat handling não é talento. É repetição deliberada. Cada virada, cada jibe, cada arranhado de boia — feito conscientemente — é um centímetro de vantagem acumulado."</p>
+
+    <p>As habilidades de manuseio do barco (boat handling) são a base visível da performance, mas o que a maioria não percebe é que elas também são <strong>treináveis com muito mais especificidade do que as pessoas aplicam</strong>.</p>
+
+    <p>Não existe "talento natural" para viradas limpas — existe repetição deliberada com feedback imediato. Nos meus programas, foco em isolamento de movimentos: primeiro, cada componente da virada separado; depois, integração em velocidade de regata; depois, sob pressão de frota.</p>
+
+    <div class="tip-box">
+      <span class="tip-box-label">Erro mais comum</span>
+      <p>Treinar boat handling sempre em velocidade de regata. <strong>Sem decomposição do movimento em partes menores, os erros se automatizam</strong> — e um erro automatizado é muito mais difícil de corrigir do que um que ainda está em formação.</p>
+    </div>
+
+    <p><strong>O que trabalhar para dar o próximo salto:</strong></p>
+
+    <ul class="checklist">
+      <li><strong>Viradas (tacks):</strong> Decomponha em 4 fases — transição de hiking, momento de cruzar, ajuste de vela, saída em velocidade. Filme e analise cada fase separadamente antes de integrar.</li>
+      <li><strong>Jibes em qualquer condição:</strong> O jibe sob pressão separa categorias. Treine em vento leve até o movimento ser inconsciente; depois evolua para médio e forte. A maioria treina jibes só quando o tempo é bom.</li>
+      <li><strong>Arranhados de boia:</strong> Cada rounding bem executado vale 1–3 posições por regata. Pratique entradas altas e baixas, entradas com frota fechada, saídas em velocidade máxima. É a habilidade com maior retorno por hora de treino.</li>
+      <li><strong>Upwind e downwind em pressão máxima:</strong> Quando o vento aumenta, a velocidade é proporcional ao conforto com o barco. Procure os dias de vento forte conscientemente — não os evite. É onde a distância para os rivais aumenta mais rápido.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- CLOSING -->
+<div class="pillar-divider"></div>
+<section class="closing">
+  <div class="closing-inner">
+    <h2>Pronto para<br>evoluir de<br><em>verdade?</em></h2>
+    <p>Este guia é o começo. O Team Fontes é onde aplicamos esses 4 pilares de forma integrada, com plano personalizado, feedback contínuo e a metodologia que levou atletas ao pódio olímpico e mundial.</p>
+    <a href="https://brunofontes.com/team-fontes" class="btn-cta">Conhecer o Team Fontes →</a>
+    <p class="closing-note">Ou fale diretamente pelo WhatsApp: +55 48 98803-8828</p>
+  </div>
+</section>
+
+<footer class="guide-footer">
+  © 2026 Bruno Fontes · <a href="https://brunofontes.com">brunofontes.com</a> · Florianópolis, SC · Todos os direitos reservados
+</footer>
+
+</body>
+</html>
