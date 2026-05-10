@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acesso ao Programa | Bruno Fontes</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png?v=13">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=13">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-50TMLWM3ES"></script>
+<script defer src="/ga.js"></script>
+<script src="i18n.js?v=25" defer></script>
+<style>
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/HTxwL3I-JCGChYJ8VI-L6OO_au7B46r2z3bWuQ.woff2') format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:800;font-display:swap;src:url('/fonts/HTxwL3I-JCGChYJ8VI-L6OO_au7B47b1z3bWuQ.woff2') format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:900;font-display:swap;src:url('/fonts/HTxwL3I-JCGChYJ8VI-L6OO_au7B45L0z3bWuQ.woff2') format('woff2')}
+@font-face{font-family:'Lato';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/S6uyw4BMUTPHjx4wXg.woff2') format('woff2')}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --gold:#EBDA0E;--gold-dark:#C8BA00;
+  --navy:#0D1B2A;--navy-mid:#1A2E42;--navy-light:#1E3A50;--navy-black:#050D14;
+  --white:#fff;--gray-100:#F5F5F5;
+  --font-display:'Barlow Condensed',Impact,sans-serif;
+  --font-body:'Lato',system-ui,sans-serif;
+  --radius:4px;--transition:0.3s ease
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--font-body);background:var(--navy);color:var(--white);overflow-x:hidden;min-height:100vh}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:3px}
+.container{width:100%;max-width:860px;margin:0 auto;padding:0 24px}
+
+/* NAV */
+nav{background:rgba(13,27,42,0.97);border-bottom:2px solid var(--gold);padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-display);font-size:1.4rem;font-weight:800;letter-spacing:.08em;color:var(--white);text-transform:uppercase}
+.nav-logo span{color:var(--gold)}
+
+/* HERO OBRIGADO */
+.hero-obrigado{text-align:center;padding:80px 24px 48px;border-bottom:1px solid rgba(255,255,255,0.08)}
+.check-circle{width:80px;height:80px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 28px;flex-shrink:0}
+.check-circle svg{width:40px;height:40px}
+.hero-obrigado h1{font-family:var(--font-display);font-size:clamp(2rem,6vw,3.5rem);font-weight:900;text-transform:uppercase;line-height:.95;margin-bottom:16px}
+.hero-obrigado h1 em{color:var(--gold);font-style:italic}
+.hero-obrigado p{font-size:1.05rem;color:rgba(255,255,255,0.75);line-height:1.7;max-width:560px;margin:0 auto}
+
+/* PASSO A PASSO */
+.steps-section{padding:56px 24px;text-align:center;border-bottom:1px solid rgba(255,255,255,0.08)}
+.steps-label{font-family:var(--font-display);font-size:.8rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;display:block}
+.steps-section h2{font-family:var(--font-display);font-size:clamp(1.6rem,4vw,2.4rem);font-weight:900;text-transform:uppercase;margin-bottom:48px}
+.steps-row{display:flex;gap:0;justify-content:center;align-items:flex-start;max-width:720px;margin:0 auto}
+.step{flex:1;padding:0 20px;position:relative}
+.step:not(:last-child)::after{content:'';position:absolute;top:20px;right:-1px;width:calc(100% - 60px);height:2px;background:rgba(235,218,14,0.25);left:calc(50% + 20px)}
+.step-num{width:40px;height:40px;border-radius:50%;background:var(--gold);color:var(--navy);font-family:var(--font-display);font-size:1.1rem;font-weight:900;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;flex-shrink:0}
+.step-title{font-family:var(--font-display);font-size:1rem;font-weight:800;text-transform:uppercase;color:var(--white);margin-bottom:8px;letter-spacing:.04em}
+.step-desc{font-size:.85rem;color:rgba(255,255,255,.6);line-height:1.6}
+
+/* SELEÇÃO DE CATEGORIA */
+.cat-section{padding:56px 24px;text-align:center}
+.cat-section h2{font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.6rem);font-weight:900;text-transform:uppercase;margin-bottom:8px}
+.cat-section p{font-size:1rem;color:rgba(255,255,255,.65);margin-bottom:40px}
+.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:32px}
+.cat-card{background:var(--navy-mid);border:2px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:32px 20px 28px;cursor:pointer;transition:border-color .25s,transform .25s,background .25s;text-align:center}
+.cat-card:hover{border-color:var(--gold);transform:translateY(-4px)}
+.cat-card.selected{border-color:var(--gold);background:var(--navy-light)}
+.cat-age{display:inline-block;font-family:var(--font-display);font-size:.7rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(235,218,14,.35);padding:3px 10px;border-radius:2px;margin-bottom:12px}
+.cat-card h3{font-family:var(--font-display);font-size:1.6rem;font-weight:900;text-transform:uppercase;color:var(--white);margin-bottom:8px}
+.cat-card p{font-size:.82rem;color:rgba(255,255,255,.6);line-height:1.6}
+
+/* ENTREGA */
+.delivery-box{background:var(--navy-light);border:2px solid var(--gold);border-radius:var(--radius);padding:36px 32px;text-align:center;display:none;max-width:600px;margin:0 auto}
+.delivery-box.visible{display:block}
+.delivery-box h3{font-family:var(--font-display);font-size:1.5rem;font-weight:900;text-transform:uppercase;color:var(--white);margin-bottom:8px}
+.delivery-box .delivery-sub{font-size:.95rem;color:rgba(255,255,255,.7);margin-bottom:28px;line-height:1.6}
+.btn-tp{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--navy);font-family:var(--font-display);font-size:1.05rem;font-weight:900;letter-spacing:.06em;text-transform:uppercase;padding:18px 36px;border-radius:var(--radius);text-decoration:none;transition:background .3s,transform .2s;min-height:56px;margin-bottom:16px}
+.btn-tp:hover{background:var(--gold-dark);transform:translateY(-2px)}
+.delivery-note{font-size:.8rem;color:rgba(255,255,255,.4);line-height:1.6}
+
+/* ACCOUNT TP */
+.tp-account{background:rgba(235,218,14,.06);border:1px solid rgba(235,218,14,.2);border-radius:var(--radius);padding:24px;margin-top:24px;text-align:left}
+.tp-account p{font-size:.85rem;color:rgba(255,255,255,.7);line-height:1.7}
+.tp-account strong{color:var(--gold)}
+.tp-account a{color:var(--gold);text-decoration:underline}
+
+/* FOOTER */
+footer{padding:24px;text-align:center;border-top:1px solid rgba(255,255,255,.08);margin-top:64px}
+.footer-text{font-size:.8rem;color:rgba(255,255,255,.35)}
+
+/* WHATSAPP */
+.wa-fixed{position:fixed;bottom:24px;right:24px;background:#25D366;color:var(--white);font-family:var(--font-display);font-size:.85rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;padding:13px 20px;border-radius:50px;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,.5);z-index:999;display:flex;align-items:center;gap:8px;min-height:48px}
+.lang-btn{background:transparent;border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,.85);font-family:var(--font-display);font-size:0.75rem;font-weight:800;letter-spacing:0.08em;padding:5px 9px;border-radius:3px;cursor:pointer;transition:all var(--transition);min-height:36px;min-width:36px}
+.lang-btn:hover{border-color:var(--gold);color:var(--gold)}
+.lang-btn.active{background:var(--gold);color:var(--navy);border-color:var(--gold)}
+
+@media(max-width:900px){
+  .cat-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:700px){
+  .cat-grid{grid-template-columns:1fr}
+  .steps-row{flex-direction:column;align-items:center;gap:28px}
+  .step::after{display:none}
+  .delivery-box{padding:28px 20px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <svg width="22" height="15" viewBox="0 0 700 490" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect width="700" height="490" fill="#009c3b"/>
+      <polygon points="350,45 655,245 350,445 45,245" fill="#ffdf00"/>
+      <circle cx="350" cy="245" r="90" fill="#002776"/>
+    </svg>
+    Bruno <span>Fontes</span>
+  </a>
+  <div style="display:flex;align-items:center;gap:8px;">
+    <div style="display:flex;gap:2px;">
+      <button data-lang="pt" class="lang-btn">PT</button>
+      <button data-lang="en" class="lang-btn">EN</button>
+      <button data-lang="es" class="lang-btn">ES</button>
+    </div>
+    <a href="https://wa.me/5548988038828?text=Ol%C3%A1%20Bruno%2C%20acabei%20de%20comprar%20o%20programa%20de%20treino!" target="_blank" rel="noopener" style="font-family:var(--font-display);font-size:.85rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--navy);background:var(--gold);padding:10px 20px;border-radius:var(--radius);" data-i18n="obrigado.nav.help">Preciso de ajuda</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- OBRIGADO -->
+<section class="hero-obrigado">
+  <div class="container">
+    <div class="check-circle">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#0D1B2A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <polyline points="20 6 9 17 4 12"/>
+      </svg>
+    </div>
+    <h1 data-i18n="obrigado.hero.h1">Pagamento<br><em>confirmado!</em></h1>
+    <p data-i18n="obrigado.hero.p">Bem-vindo ao programa de treino olímpico. Agora é só escolher sua categoria e acessar o Training Peaks.</p>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="steps-section">
+  <div class="container">
+    <span class="steps-label" data-i18n="obrigado.steps.label">Como acessar</span>
+    <h2 data-i18n="obrigado.steps.title">3 passos simples</h2>
+    <div class="steps-row">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-title">Conecte-se ao Bruno</div>
+        <p class="step-desc">Clique no botão abaixo e aceite o Bruno como seu técnico no Training Peaks</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-title">Avise sua categoria</div>
+        <p class="step-desc">Mande um WhatsApp informando se você é Kids, Youth, Performance ou Master</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-title">Receba seu programa</div>
+        <p class="step-desc">Bruno aplica o plano de 4 semanas direto no seu calendário em até 24h</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PASSO 0: CRIAR CONTA TP (para quem ainda não tem) -->
+<section style="padding:48px 24px;text-align:center;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(235,218,14,0.03);">
+  <div class="container">
+    <p style="font-family:var(--font-display);font-size:.8rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;" data-i18n="obrigado.step0.label">Antes de começar</p>
+    <h2 style="font-family:var(--font-display);font-size:clamp(1.4rem,4vw,2rem);font-weight:900;text-transform:uppercase;margin-bottom:8px;" data-i18n="obrigado.step0.title">Você já usa o Training Peaks?</h2>
+    <p style="font-size:.9rem;color:rgba(255,255,255,.6);margin-bottom:28px;max-width:520px;margin-left:auto;margin-right:auto;" data-i18n="obrigado.step0.desc">O Training Peaks é o app onde seu programa vai aparecer. A conta básica é gratuita. Se ainda não tiver, crie agora em 2 minutos antes de continuar.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:16px;">
+      <a href="https://home.trainingpeaks.com/sign-up" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:var(--navy-mid);border:1px solid rgba(255,255,255,.15);color:var(--white);font-family:var(--font-display);font-size:.9rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:12px 24px;border-radius:var(--radius);text-decoration:none;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+        <span data-i18n="obrigado.step0.web">Criar conta grátis no site</span>
+      </a>
+      <a href="https://apps.apple.com/app/trainingpeaks/id307694858" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:var(--navy-mid);border:1px solid rgba(255,255,255,.15);color:var(--white);font-family:var(--font-display);font-size:.9rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:12px 24px;border-radius:var(--radius);text-decoration:none;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        App Store
+      </a>
+      <a href="https://play.google.com/store/apps/details?id=com.trainingpeaks.trainingpeaks" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:var(--navy-mid);border:1px solid rgba(255,255,255,.15);color:var(--white);font-family:var(--font-display);font-size:.9rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:12px 24px;border-radius:var(--radius);text-decoration:none;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.3.17.64.22.99.14l12.9-7.45-2.79-2.79-11.1 10.1zm-.99-20.7v19.88c0 .48.26.89.66 1.1l11.22-11.22L2.85 1.96c-.4.21-.66.62-.66 1.1zm20.07 8.97l-2.84-1.64-3.12 3.12 3.12 3.12 2.87-1.66c.82-.47.82-1.47-.03-1.94zM4.17.15L17.07 7.6l-2.79 2.79L3.18.29C3.48.1 3.87.05 4.17.15z"/></svg>
+        Google Play
+      </a>
+    </div>
+    <p style="font-size:.75rem;color:rgba(255,255,255,.35);" data-i18n="obrigado.step0.note">Conta gratuita é suficiente. Você não precisa do plano pago.</p>
+  </div>
+</section>
+
+<!-- AÇÃO PRINCIPAL -->
+<section style="padding:48px 24px;text-align:center;border-bottom:1px solid rgba(255,255,255,.08);">
+  <div class="container">
+    <p style="font-family:var(--font-display);font-size:.8rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;" data-i18n="obrigado.passo1.label">Passo 1</p>
+    <h2 style="font-family:var(--font-display);font-size:clamp(1.6rem,4vw,2.2rem);font-weight:900;text-transform:uppercase;margin-bottom:8px;" data-i18n="obrigado.passo1.title">Conecte-se ao Bruno<br>no Training Peaks</h2>
+    <p style="font-size:.95rem;color:rgba(255,255,255,.65);margin-bottom:32px;max-width:480px;margin-left:auto;margin-right:auto;" data-i18n="obrigado.passo1.desc">Com sua conta criada, clique no botão abaixo. Você vai ver a tela do Training Peaks pedindo para aceitar Bruno Fontes como técnico. Confirme e pronto.</p>
+    <a href="https://home.trainingpeaks.com/attachtocoach?sharedKey=QR2HPNLEGTQHE" target="_blank" rel="noopener" class="btn-tp" style="margin:0 auto;display:inline-flex;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+      <span data-i18n="obrigado.passo1.cta">Aceitar Bruno como técnico no Training Peaks</span>
+    </a>
+    <p style="margin-top:16px;font-size:.8rem;color:rgba(255,255,255,.35);" data-i18n="obrigado.passo1.note">Você será redirecionado para o Training Peaks. Faça login com a conta que acabou de criar.</p>
+  </div>
+</section>
+
+<!-- CATEGORIA -->
+<section class="cat-section">
+  <div class="container">
+    <p style="font-family:var(--font-display);font-size:.8rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Passo 2</p>
+    <h2 data-i18n="obrigado.cat.title">Qual é a sua categoria?</h2>
+    <p style="font-size:.95rem;color:rgba(255,255,255,.65);margin-bottom:32px;">Clique no botão da sua categoria para avisar o Bruno pelo WhatsApp.<br>Ele aplica o plano no seu calendário em até 24h.</p>
+
+    <div class="cat-grid">
+
+      <div class="cat-card" style="display:flex;flex-direction:column;">
+        <span class="cat-age" data-i18n="obrigado.cat.kids.age">até 14 anos</span>
+        <h3>Kids</h3>
+        <p data-i18n="obrigado.cat.kids.desc" style="flex:1;margin-bottom:20px;">Desenvolvimento físico saudável com fundamentos de coordenação, equilíbrio e resistência</p>
+        <a href="https://wa.me/5548988038828?text=Ol%C3%A1%20Bruno%2C%20me%20conectei%20no%20Training%20Peaks.%20Sou%20da%20categoria%20Kids." target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:8px;background:#25D366;color:#fff;font-family:var(--font-display);font-size:.8rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:12px 16px;border-radius:var(--radius);text-decoration:none;min-height:44px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Sou Kids
+        </a>
+      </div>
+
+      <div class="cat-card" style="display:flex;flex-direction:column;">
+        <span class="cat-age" data-i18n="obrigado.cat.youth.age">até 22 anos</span>
+        <h3>Youth</h3>
+        <p data-i18n="obrigado.cat.youth.desc" style="flex:1;margin-bottom:20px;">Periodização competitiva e condicionamento para o circuito nacional e internacional</p>
+        <a href="https://wa.me/5548988038828?text=Ol%C3%A1%20Bruno%2C%20me%20conectei%20no%20Training%20Peaks.%20Sou%20da%20categoria%20Youth." target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:8px;background:#25D366;color:#fff;font-family:var(--font-display);font-size:.8rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:12px 16px;border-radius:var(--radius);text-decoration:none;min-height:44px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Sou Youth
+        </a>
+      </div>
+
+      <div class="cat-card" style="display:flex;flex-direction:column;">
+        <span class="cat-age" data-i18n="obrigado.cat.perf.age">23–34 anos</span>
+        <h3>Performance</h3>
+        <p data-i18n="obrigado.cat.perf.desc" style="flex:1;margin-bottom:20px;">Alta intensidade e protocolo de recuperação para atletas de alto rendimento</p>
+        <a href="https://wa.me/5548988038828?text=Ol%C3%A1%20Bruno%2C%20me%20conectei%20no%20Training%20Peaks.%20Sou%20da%20categoria%20Performance." target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:8px;background:#25D366;color:#fff;font-family:var(--font-display);font-size:.8rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:12px 16px;border-radius:var(--radius);text-decoration:none;min-height:44px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Sou Performance
+        </a>
+      </div>
+
+      <div class="cat-card" style="display:flex;flex-direction:column;">
+        <span class="cat-age" data-i18n="obrigado.cat.master.age">+35 anos</span>
+        <h3>Master</h3>
+        <p data-i18n="obrigado.cat.master.desc" style="flex:1;margin-bottom:20px;">Longevidade, prevenção de lesões e periodização inteligente para atletas veteranos</p>
+        <a href="https://wa.me/5548988038828?text=Ol%C3%A1%20Bruno%2C%20me%20conectei%20no%20Training%20Peaks.%20Sou%20da%20categoria%20Master." target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:8px;background:#25D366;color:#fff;font-family:var(--font-display);font-size:.8rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:12px 16px;border-radius:var(--radius);text-decoration:none;min-height:44px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Sou Master
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p class="footer-text" data-i18n="obrigado.footer">© 2025–2026 Bruno Fontes · Florianópolis, SC · Dúvidas? <a href="https://wa.me/5548988038828" style="color:rgba(255,255,255,.5);text-decoration:underline;">WhatsApp</a></p>
+</footer>
+
+<a href="https://wa.me/5548988038828?text=Ol%C3%A1%20Bruno%2C%20comprei%20o%20programa%20e%20preciso%20de%20ajuda!" target="_blank" rel="noopener" class="wa-fixed" aria-label="Falar com Bruno">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span data-i18n="obrigado.nav.help">Preciso de ajuda</span>
+</a>
+
+
+</body>
+</html>

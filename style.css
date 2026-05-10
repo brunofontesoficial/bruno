@@ -250,7 +250,7 @@ section { padding: var(--section-pad); }
 
 /* ---------- FOOTER ---------- */
 footer { background: var(--navy-black); padding: 28px 24px; text-align: center; }
-.footer-text { font-size: 0.82rem; color: rgba(255,255,255,0.6); }
+.footer-text { font-size: 0.82rem; color: rgba(255,255,255,0.85); }
 
 /* ---------- WHATSAPP FIXO ---------- */
 .whatsapp-fixed { position: fixed; bottom: 28px; right: 28px; background: #25D366; color: var(--white); font-family: var(--font-display); font-size: 0.9rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; padding: 14px 22px; border-radius: 50px; text-decoration: none; box-shadow: 0 4px 20px rgba(37,211,102,0.5); z-index: 999; display: flex; align-items: center; gap: 8px; animation: pulse-wa 2.5s infinite; min-height: 52px; }

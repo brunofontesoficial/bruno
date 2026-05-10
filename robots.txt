@@ -4,8 +4,14 @@ Allow: /
 # Bloquear thank-you page (conversão)
 Disallow: /obrigado.html
 
+# Lead magnet — noindex, não rastrear
+Disallow: /guia-4-pilares
+
+# Página de entrega pós-compra — não indexar
+Disallow: /obrigado-treino
+
 # Bloquear sobras de cPanel caso reapareçam
 Disallow: /cgi-sys/
 Disallow: /cgi-bin/
 
-Sitemap: https://www.brunofontes.com/sitemap.xml
+Sitemap: https://brunofontes.com/sitemap.xml
