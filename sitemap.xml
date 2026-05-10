@@ -1,17 +1,157 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://brunofontes.com/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://brunofontes.com/atleta</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://brunofontes.com/team-fontes</loc><changefreq>weekly</changefreq><priority>0.95</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- ============ HOME (PT / EN / ES) ============ -->
+  <url>
+    <loc>https://brunofontes.com/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://brunofontes.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://brunofontes.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://brunofontes.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://brunofontes.com/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://brunofontes.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://brunofontes.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://brunofontes.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://brunofontes.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://brunofontes.com/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://brunofontes.com/es/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://brunofontes.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://brunofontes.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://brunofontes.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://brunofontes.com/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- ============ ATLETA (PT / EN / ES) ============ -->
+  <url>
+    <loc>https://brunofontes.com/atleta</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://brunofontes.com/atleta"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://brunofontes.com/en/atleta"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://brunofontes.com/es/atleta"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://brunofontes.com/atleta"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url><loc>https://brunofontes.com/en/atleta</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://brunofontes.com/es/atleta</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+
+  <!-- ============ TEAM FONTES (PT / EN / ES) ============ -->
+  <url>
+    <loc>https://brunofontes.com/team-fontes</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://brunofontes.com/team-fontes"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://brunofontes.com/en/team-fontes"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://brunofontes.com/es/team-fontes"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://brunofontes.com/team-fontes"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url><loc>https://brunofontes.com/en/team-fontes</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://brunofontes.com/es/team-fontes</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+
+  <!-- ============ TREINO (só PT por enquanto) ============ -->
   <url><loc>https://brunofontes.com/treino</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://brunofontes.com/clinicas</loc><changefreq>weekly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://brunofontes.com/palestras</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://brunofontes.com/sailing-experience</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://brunofontes.com/parceiros</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://brunofontes.com/eventos</loc><changefreq>weekly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://brunofontes.com/coaching-ilca</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+
+  <!-- ============ CLINICAS (PT / EN / ES) ============ -->
+  <url>
+    <loc>https://brunofontes.com/clinicas</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://brunofontes.com/clinicas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://brunofontes.com/en/clinicas"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://brunofontes.com/es/clinicas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://brunofontes.com/clinicas"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url><loc>https://brunofontes.com/en/clinicas</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://brunofontes.com/es/clinicas</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+
+  <!-- ============ PALESTRAS (PT / EN / ES) ============ -->
+  <url>
+    <loc>https://brunofontes.com/palestras</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://brunofontes.com/palestras"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://brunofontes.com/en/palestras"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://brunofontes.com/es/palestras"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://brunofontes.com/palestras"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url><loc>https://brunofontes.com/en/palestras</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://brunofontes.com/es/palestras</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+
+  <!-- ============ SAILING EXPERIENCE (PT / EN / ES) ============ -->
+  <url>
+    <loc>https://brunofontes.com/sailing-experience</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://brunofontes.com/sailing-experience"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://brunofontes.com/en/sailing-experience"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://brunofontes.com/es/sailing-experience"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://brunofontes.com/sailing-experience"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url><loc>https://brunofontes.com/en/sailing-experience</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://brunofontes.com/es/sailing-experience</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+
+  <!-- ============ PARCEIROS (PT / EN / ES) ============ -->
+  <url>
+    <loc>https://brunofontes.com/parceiros</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://brunofontes.com/parceiros"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://brunofontes.com/en/parceiros"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://brunofontes.com/es/parceiros"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://brunofontes.com/parceiros"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url><loc>https://brunofontes.com/en/parceiros</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brunofontes.com/es/parceiros</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- ============ EVENTOS (PT / EN / ES) ============ -->
+  <url>
+    <loc>https://brunofontes.com/eventos</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://brunofontes.com/eventos"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://brunofontes.com/en/eventos"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://brunofontes.com/es/eventos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://brunofontes.com/eventos"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url><loc>https://brunofontes.com/en/eventos</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://brunofontes.com/es/eventos</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+
+  <!-- ============ COACHING ILCA (PT / EN / ES) ============ -->
+  <url>
+    <loc>https://brunofontes.com/coaching-ilca</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://brunofontes.com/coaching-ilca"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://brunofontes.com/en/coaching-ilca"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://brunofontes.com/es/coaching-ilca"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://brunofontes.com/coaching-ilca"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url><loc>https://brunofontes.com/en/coaching-ilca</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://brunofontes.com/es/coaching-ilca</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+
+  <!-- ============ ABOUT (PT / EN / ES) ============ -->
+  <url>
+    <loc>https://brunofontes.com/about</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://brunofontes.com/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://brunofontes.com/en/about"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://brunofontes.com/es/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://brunofontes.com/about"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url><loc>https://brunofontes.com/en/about</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://brunofontes.com/es/about</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+
+  <!-- ============ Outras (só PT) ============ -->
   <url><loc>https://brunofontes.com/contato</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brunofontes.com/about</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://brunofontes.com/blog/guia-ilca</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://brunofontes.com/blog/hiking-ilca-erros</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://brunofontes.com/blog/ilca4-vs-ilca6</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>

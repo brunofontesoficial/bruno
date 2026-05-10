@@ -1,4 +1,4 @@
-# Redireciona URLs .html → URLs limpas (canonical)
+# ═══ URLS PT — .html → URL limpa (canonical) ═══
 /index.html             /                       301
 /atleta.html            /atleta                 301
 /clinicas.html          /clinicas               301
@@ -12,7 +12,31 @@
 /sailing-experience.html /sailing-experience    301
 /privacidade.html       /privacidade            301
 
-# Redireciona páginas órfãs (conteúdo 404) para destinos corretos
+# ═══ URLS EN — .html → URL limpa ═══
+/en/index.html          /en/                    301
+/en/atleta.html         /en/atleta              301
+/en/team-fontes.html    /en/team-fontes         301
+/en/clinicas.html       /en/clinicas            301
+/en/palestras.html      /en/palestras           301
+/en/sailing-experience.html /en/sailing-experience 301
+/en/parceiros.html      /en/parceiros           301
+/en/eventos.html        /en/eventos             301
+/en/coaching-ilca.html  /en/coaching-ilca       301
+/en/about.html          /en/about               301
+
+# ═══ URLS ES — .html → URL limpa ═══
+/es/index.html          /es/                    301
+/es/atleta.html         /es/atleta              301
+/es/team-fontes.html    /es/team-fontes         301
+/es/clinicas.html       /es/clinicas            301
+/es/palestras.html      /es/palestras           301
+/es/sailing-experience.html /es/sailing-experience 301
+/es/parceiros.html      /es/parceiros           301
+/es/eventos.html        /es/eventos             301
+/es/coaching-ilca.html  /es/coaching-ilca       301
+/es/about.html          /es/about               301
+
+# ═══ Páginas órfãs (legacy / 404 fixes) ═══
 /coach.html             /team-fontes            301
 /palestra.html          /palestras              301
 /coach                  /team-fontes            301
